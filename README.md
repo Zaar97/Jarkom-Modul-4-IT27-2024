@@ -27,3 +27,13 @@
 # RUTE
 
 # VLSM
+
+## Tree
+
+![Tree VLSM drawio](https://github.com/Zaar97/Jarkom-Modul-4-IT27-2024/assets/128958228/1861840c-afe4-4730-a275-6f8bf332a6ac)
+
+## Pembagian IP
+
+![image](https://github.com/Zaar97/Jarkom-Modul-4-IT27-2024/assets/128958228/e4d7613d-a384-45c5-a287-a97bda0c928f)
+
+
