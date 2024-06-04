@@ -30,7 +30,7 @@
 
 ## Tree
 
-![Tree VLSM drawio](https://github.com/Zaar97/Jarkom-Modul-4-IT27-2024/assets/128958228/1861840c-afe4-4730-a275-6f8bf332a6ac)
+![image](https://github.com/Zaar97/Jarkom-Modul-4-IT27-2024/assets/128958228/ea0da3b6-dff1-4813-aa64-c74a926104e4)
 
 ## Pembagian IP
 
