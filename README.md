@@ -12,6 +12,18 @@
 
 ## Topology
 
-# GNS3 
+# GNS3 VLSM
 
-![image](https://github.com/Zaar97/Jarkom-Modul-4-IT27-2024/assets/128958228/2868a8dc-ba1c-4575-b286-f381ce6db848)
+![image](https://github.com/Zaar97/Jarkom-Modul-4-IT27-2024/assets/128958228/5b1a08a0-87e7-450f-a73b-7e9bd87a8b25)
+
+# CPT CIDR
+
+# PREFIX IP
+
+```bash
+10.77
+```
+
+## RUTE
+
+## VLSM
