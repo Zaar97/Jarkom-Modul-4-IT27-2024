@@ -11,8 +11,8 @@
   - [Topology](#topology)
   - [Prefix IP](#prefix-ip)
   - [Rute](#rute)
-  - VLSM
-  - CIDR
+  - [VLSM](#vlsm)
+  - [CIDR](#cidr)
 
 # Topology
 
@@ -24,7 +24,7 @@
 
 # PREFIX IP
 
-Kelompok kami menggunakan prefix `IP 10.77`
+Kelompok kami menggunakan prefix IP `10.77`
 
 # RUTE
 
@@ -98,6 +98,30 @@ Berikut adalah hasil dari pembagian IP yang telah kami peroleh dari hasil pemeca
     iface eth2 inet static
       address 10.77.21.205
       netmask 255.255.255.252
+    ```
+  - Sulawesi
+    ```bash
+
+    ```
+  - Sumatera-utara
+    ```bash
+
+    ```
+  - Kalimantan
+    ```bash
+
+    ```
+  - Kalimantan Utara
+    ```bash
+
+    ```
+  - Kalimantan Selatan
+    ```bash
+
+    ```
+  - Kalimantan Timur
+    ```bash
+
     ```
 
 ## Routing
