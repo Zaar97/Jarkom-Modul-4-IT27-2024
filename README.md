@@ -103,17 +103,65 @@ Berikut adalah hasil dari pembagian IP yang telah kami peroleh dari hasil pemeca
     ```bash
 
     ```
-  - Sumatera-utara
+  - Sumatera Utara
     ```bash
+    auto lo
+    iface lo inet loopback
 
+    #A16 > SW-TOBA
+    auto eth0
+    iface eth0 inet static
+      address 10.77.21.73
+      netmask 255.255.255.224
+      gateway 10.77.21.65
+
+    #A17 > ACEH
+    auto eth1   
+    iface eth1 inet static
+      address 10.77.21.201
+      netmask 255.255.255.252
     ```
   - Kalimantan
     ```bash
+    auto lo
+    iface lo inet loopback
 
+    #A7 > JAWA
+    auto eth0
+    iface eth0 inet static
+      address 10.77.21.186
+      netmask 255.255.255.252
+      gateway 10.77.21.185
+
+    #A8 > KALIMANTAN-UTARA
+    auto eth1
+    iface eth1 inet static
+      address 10.77.21.189
+      netmask 255.255.255.252
     ```
   - Kalimantan Utara
     ```bash
+    auto lo
+    iface lo inet loopback
 
+    #A8 > KALIMANTAN
+    auto eth0
+    iface eth0 inet static
+      address 10.77.21.190
+      netmask 255.255.255.252
+      gateway 10.77.21.189
+
+    #A9 > SW-TANJUNG-SELOR
+    auto eth1
+    iface eth1 inet static
+      address 10.77.18.1
+      netmask 255.255.255.0
+
+    #A10 > KALIMANTAN-TIMUR
+    auto eth2
+    iface eth2 inet static
+      address 10.77.21.193
+      netmask 255.255.255.252
     ```
   - Kalimantan Selatan
     ```bash
@@ -123,7 +171,56 @@ Berikut adalah hasil dari pembagian IP yang telah kami peroleh dari hasil pemeca
     ```bash
 
     ```
+  - Lampung
+    ```bash
+    auto lo
+    iface lo inet loopback
 
+    #A20 > SUMATERA
+    auto eth0
+    iface eth0 inet static
+      address 10.77.21.206
+      netmask 255.255.255.252
+      gateway 10.77.21.205
+
+    #A21 > SW-BANDAR-LAMPUNG
+    auto eth1   
+    iface eth1 inet static
+      address 10.77.19.1
+      netmask 255.255.255.0   
+    ```
+  - Aceh
+    ```bash
+    auto lo
+    iface lo inet loopback
+
+    #A17 > SUMATERA-UTARA
+    auto eth0
+    iface eth0 inet static
+      address 10.77.21.202
+      netmask 255.255.255.252
+      gateway 10.77.21.201
+
+    #A18 > SW-BLANGKARAI
+    auto eth1
+    iface eth1 inet static
+      address 10.77.20.1
+      netmask 255.255.255.128
+
+    #A19 > SW-BANDA-ACEH
+    auto eth2
+    iface eth1 inet static
+      address 10.77.21.129
+      netmask 255.255.255.224
+    ```
+  - Maluku Utara
+    ```bash
+    
+    ```
+  - Belawa
+    ```bash
+    
+    ```
 ## Routing
   - Jawa
     ```bash
@@ -153,29 +250,51 @@ Berikut adalah hasil dari pembagian IP yang telah kami peroleh dari hasil pemeca
     ```
   - Sulawesi
     ```bash
+    #KE MALUKU-UTARA
+    route add -net 10.77.8.0 netmask 255.255.248.0 gw 10.77.20.132
 
+    #KE MAKASAR
+    route add -net 10.77.21.160 netmask 255.255.255.248 gw 10.77.21.170
+
+    #KE BELAWA
+    route add -net 10.77.21.0 netmask 255.255.255.192 gw 10.77.21.171
     ```
   - Sumatera
     ```bash
+    #KE SUMATERA-UTARA
+    route add -net 10.77.21.184 netmask 255.255.255.252 gw 10.77.21.73
+    route add -net 10.77.20.0 netmask 255.255.255.128 gw 10.77.21.73
+    route add -net 10.77.21.128 netmask 255.255.255.224 gw 10.77.21.73
 
+    #KE LAMPUNG
+    route add -net 10.69.77.0 netmask 255.255.255.0 gw 10.77.21.206
     ```
   - Sumatera-utara
     ```bash
-
+    route add -net 10.77.20.0 netmask 255.255.255.128 gw 10.77.21.202 #SW-BLANGKARAI
+    route add -net 10.77.21.128 netmask 255.255.255.224 gw 10.77.21.202 #SW-BANDA-ACEH
     ```
   - Kalimantan
     ```bash
-
+    route add -net 10.77.21.192 netmask 255.255.255.252 gw 10.77.21.190
+    route add -net 10.77.18.0 netmask 255.255.254.0 gw 10.77.21.190
+    route add -net 10.77.21.196 netmask 255.255.255.252 gw 10.77.21.190
+    route add -net 10.77.21.96 netmask 255.255.255.224 gw 10.77.21.190
+    route add -net 10.77.0.0 netmask 255.255.248.0 gw 10.77.21.190
     ```
   - Kalimantan Utara
     ```bash
-
+    route add -net 10.77.16.0 netmask 255.255.254.0 gw 10.77.21.194
+    route add -net 10.77.21.200 netmask 255.255.255.252 gw 10.77.21.194
+    route add -net 10.77.21.96 netmask 255.255.255.224 gw 10.77.21.194
+    route add -net 10.77.0.0 netmask 255.255.248.0 gw 10.77.21.194
     ```
   - Kalimantan Selatan
     ```bash
-
+    route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.77.21.197
     ```
   - Kalimantan Timur
     ```bash
-
+    route add -net 10.77.21.96 netmask 255.255.255.224 gw 10.77.21.198
+    route add -net 10.77.0.0 netmask 255.255.248.0 gw 10.77.21.198
     ```
