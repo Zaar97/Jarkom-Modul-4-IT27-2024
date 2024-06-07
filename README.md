@@ -167,11 +167,52 @@ Berikut adalah hasil dari pembagian IP yang telah kami peroleh dari hasil pemeca
     ```
   - Kalimantan Selatan
     ```bash
+    auto lo
+    iface lo inet loopback
 
+    #A11 > KALIMANTAN-TIMUR
+    auto eth0
+    iface eth0 inet static
+      address 10.77.21.198
+      netmask 255.255.255.252
+      gateway 10.77.21.197
+
+    #A13 > SW-BOENATI
+    auto eth1
+    iface eth1 inet static
+      address 10.77.21.97
+      netmask 255.255.255.224
+
+
+    #A14 > SW-BANJARMASIN
+    auto eth2
+    iface eth1 inet static
+      address 10.77.0.1
+      netmask 255.255.248.0
     ```
   - Kalimantan Timur
     ```bash
+    auto lo
+    iface lo inet loopback
 
+    #A10 > KALIMANTAN-UTARA
+    auto eth0
+    iface eth0 inet static
+      address 10.77.21.194
+      netmask 255.255.255.252
+      gateway 10.77.21.193
+
+    #A11 > KALIMANTAN-SELATAN
+    auto eth1
+    iface eth1 inet static
+      address 10.77.21.197
+      netmask 255.255.255.252
+
+    #A12 > SW-BALIKPAPAN
+    auto eth2
+    iface eth2 inet static
+      address 10.77.16.1
+      netmask 255.255.254.0
     ```
   - Lampung
     ```bash
@@ -217,11 +258,36 @@ Berikut adalah hasil dari pembagian IP yang telah kami peroleh dari hasil pemeca
     ```
   - Maluku Utara
     ```bash
-    
+    #A2 > SW-GORONTALO
+    auto eth0
+    iface eth0 inet static
+      address 10.77.20.132
+      netmask 255.255.255.128
+      gateway 10.77.20.129
+
+    #A3 > SW-MALUKU
+    auto eth1
+    iface eth1 inet static
+      address 10.77.8.1
+      netmask 255.255.248.0
     ```
   - Belawa
     ```bash
-    
+    auto lo
+    iface lo inet loopback
+
+    #A4 > SW-SULSEL
+    auto eth0
+    iface eth0 inet static
+      address 10.77.21.171
+      netmask 255.255.255.248
+      gateway 10.77.21.169
+
+    #A6 > SW-TEMPE
+    auto eth1
+    iface eth1 inet static
+      address 10.77.21.1
+      netmask 255.255.255.192
     ```
 ## Routing
   - Jawa
@@ -300,6 +366,23 @@ Berikut adalah hasil dari pembagian IP yang telah kami peroleh dari hasil pemeca
     route add -net 10.77.21.96 netmask 255.255.255.224 gw 10.77.21.198
     route add -net 10.77.0.0 netmask 255.255.248.0 gw 10.77.21.198
     ```
+
+## Testing
+
+![WhatsApp Image 2024-06-06 at 08 48 41_ebf6c119](https://github.com/Zaar97/Jarkom-Modul-4-IT27-2024/assets/128958228/b7c0b87d-c3fc-4231-b08d-4bcb583c7351)
+
+![WhatsApp Image 2024-06-06 at 08 49 00_9e1ce5ef](https://github.com/Zaar97/Jarkom-Modul-4-IT27-2024/assets/128958228/f8dab401-2eb2-4a2f-b561-b317d3f7859d)
+
+![WhatsApp Image 2024-06-06 at 08 52 54_dea1033d](https://github.com/Zaar97/Jarkom-Modul-4-IT27-2024/assets/128958228/2436af54-27a9-499e-993d-fc3148d15948)
+
+![WhatsApp Image 2024-06-06 at 08 53 06_473f06f9](https://github.com/Zaar97/Jarkom-Modul-4-IT27-2024/assets/128958228/4473fe7b-cb79-4648-94e3-4842a5c65952)
+
+![WhatsApp Image 2024-06-06 at 11 35 13_408675e9](https://github.com/Zaar97/Jarkom-Modul-4-IT27-2024/assets/128958228/e5593c74-dd3c-4bb2-ac09-843ce5b115fd)
+
+![WhatsApp Image 2024-06-06 at 11 35 40_5d06a53e](https://github.com/Zaar97/Jarkom-Modul-4-IT27-2024/assets/128958228/b1a717db-e46b-44a7-a235-1f3ad74468f6)
+
+![WhatsApp Image 2024-06-06 at 11 35 55_c7836462](https://github.com/Zaar97/Jarkom-Modul-4-IT27-2024/assets/128958228/1ec4c443-8d29-4351-b99b-abf96e6af3fa)
+
 
 # CIDR
 
